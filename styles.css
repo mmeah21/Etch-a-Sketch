@@ -1,0 +1,16 @@
+.pad {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 40rem;
+    width: 40rem;
+}
+
+.square {
+   background-color: yellow;
+   height: 24%;
+   width: 24%; 
+   margin: 0;
+   border-style: solid;
+   border-color: blue;
+}
