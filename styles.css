@@ -4,12 +4,15 @@
     flex-wrap: wrap;
     height: 40rem;
     width: 40rem;
+    padding:0%;
+    margin: 0;
+    align-content: center;
 }
 
 .square {
    background-color: yellow;
-   height: 24%;
-   width: 24%; 
+   height: 0%;
+   width: 0%;
    margin: 0;
    border-style: solid;
    border-color: blue;
