@@ -4,12 +4,15 @@
 
 //pad.textContent = 'test';
 //testing pad content
-const numberOfSquares = 16;
+ const numberOfSquares = 16;
  createSquares(pad,numberOfSquares);
  const squares = document.querySelectorAll('div.square');
+ let squareList = Array.from(squares);
  
-
-
+ //Setup Grid
+ adjusted();
+ highLight ();
+ setIdSquares(squareList);
 
 
 
@@ -23,11 +26,11 @@ const numberOfSquares = 16;
     }
  }
 
+
+
+
+
 //assign id number for each square
-let squareList = Array.from(squares);
-setIdSquares(squareList);
-
-
 function setIdSquares(arr){
     for(var i = 0; i < arr.length; i++){
         arr[i].id = i+1;
@@ -58,8 +61,7 @@ function adjusted (){
 console.log(toPercentDimensions(numberOfSquares));
 //console.log(toPercentBorder(numberOfSquares));
 console.log(numberOfSquares);
-adjusted();
-highLight ();
+
 
 //Assign hovering effect to all squares with a specific color
 function highLight (){
@@ -70,3 +72,20 @@ function highLight (){
         });
     });
 };
+
+
+//add button to prompt request of new grid dimensions < 100
+
+const body = document.querySelector('body');
+
+const button = document.createElement('button');
+
+button.classList.add('.buttons');
+
+button.textContent="Click to resize Grid";
+
+button.addEventListener('click', function (e) {
+    console.log(e.target);
+  });
+
+  body.appendChild(button);
