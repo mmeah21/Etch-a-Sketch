@@ -4,7 +4,7 @@
 
 //pad.textContent = 'test';
 //testing pad content
-const numberOfSquares = 30;
+const numberOfSquares = 16;
  createSquares(pad,numberOfSquares);
  const squares = document.querySelectorAll('div.square');
  
@@ -59,4 +59,15 @@ console.log(toPercentDimensions(numberOfSquares));
 console.log(toPercentBorder(numberOfSquares));
 console.log(numberOfSquares);
 adjusted();
+
+
+//Assign hovering effect to all squares with a specific color
+const cells = document.querySelectorAll('.square');
+
+
+cells.forEach(cell => {
+    cell.addEventListener('mouseover', function onHover(event){
+        cell.style.backgroundColor = 'red';
+    });
+});
 
