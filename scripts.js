@@ -35,13 +35,13 @@ function setIdSquares(arr){
 }
 
 function toPercentDimensions(num1){
-    let ans=((.8/num1)*100);
+    let ans=((.9/num1)*100);
     return ans+'%';
 }
 
 function toPercentBorder(num1){
-    let ans=((0.2/num1)*100);
-    return ans+'%';
+    let ans=((0.1/num1)*100);
+    return ans+'px';
 }
 
 
@@ -52,22 +52,21 @@ function adjusted (){
     document.querySelectorAll('.square').forEach(div => {
     div.style.height = toPercentDimensions(numberOfSquares);
     div.style.width = toPercentDimensions(numberOfSquares);
-    div.style.borderWidth == toPercentBorder(numberOfSquares);
+    div.style.borderWidth = toPercentBorder(numberOfSquares);
     })
 };
 console.log(toPercentDimensions(numberOfSquares));
-console.log(toPercentBorder(numberOfSquares));
+//console.log(toPercentBorder(numberOfSquares));
 console.log(numberOfSquares);
 adjusted();
-
+highLight ();
 
 //Assign hovering effect to all squares with a specific color
-const cells = document.querySelectorAll('.square');
-
-
-cells.forEach(cell => {
-    cell.addEventListener('mouseover', function onHover(event){
-        cell.style.backgroundColor = 'red';
+function highLight (){
+    const cells = document.querySelectorAll('.square');
+    cells.forEach(cell => {
+        cell.addEventListener('mouseover', function onHover(event){
+            cell.style.backgroundColor = 'red';
+        });
     });
-});
-
+};
