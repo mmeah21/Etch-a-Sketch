@@ -84,8 +84,18 @@ button.classList.add('.buttons');
 
 button.textContent="Click to resize Grid";
 
-button.addEventListener('click', function (e) {
-    console.log(e.target);
-  });
+button.addEventListener('click', () => {
+    prompt("How many squares per row do you need?");
+    
+});
 
   body.appendChild(button);
+
+  /*function promptResize(){
+    
+    let dimensions = prompt("How many squares per row do you want on your grid? (Must be less than or equal to 100");
+        return dimensions;
+  }
+promptResize();
+  console.log(promptResize);
+  */
