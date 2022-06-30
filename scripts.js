@@ -84,18 +84,26 @@ button.classList.add('.buttons');
 
 button.textContent="Click to resize Grid";
 
+let answer = 0;
 button.addEventListener('click', () => {
-    prompt("How many squares per row do you need?");
-    
+    answer= prompt("How many squares per row do you want on your grid? (Must be less than or equal to 100");
+    answer=parseInt(answer);
+    console.log(answer);
+    isValid(answer);
 });
 
-  body.appendChild(button);
 
-  /*function promptResize(){
-    
-    let dimensions = prompt("How many squares per row do you want on your grid? (Must be less than or equal to 100");
-        return dimensions;
-  }
-promptResize();
-  console.log(promptResize);
-  */
+
+  body.prepend(button);
+
+  //check answer is valid, if so then apply new changes. If not tell user.
+  function isValid(answer){
+    while(answer<0 || answer > 100){
+        answer = parseInt(prompt("Not in range, please try again.(Must be less than or equal to 100"));
+        
+    }
+};
+
+
+
+
