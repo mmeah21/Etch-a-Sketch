@@ -4,7 +4,7 @@
 
 //pad.textContent = 'test';
 //testing pad content
- const numberOfSquares = 16;
+ let numberOfSquares = 16;
  createSquares(pad,numberOfSquares);
  const squares = document.querySelectorAll('div.square');
  let squareList = Array.from(squares);
@@ -90,6 +90,16 @@ button.addEventListener('click', () => {
     answer=parseInt(answer);
     console.log(answer);
     isValid(answer);
+    const things = document.querySelectorAll('.square');
+    things.forEach(square=> {
+        square.remove();
+    });
+
+    numberOfSquares = answer;
+    createSquares(pad,numberOfSquares);
+    adjusted();
+    highLight ();
+    setIdSquares(squareList);
 });
 
 
