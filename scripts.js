@@ -80,7 +80,7 @@ const body = document.querySelector('body');
 
 const button = document.createElement('button');
 
-button.classList.add('.buttons');
+button.classList.add('buttons');
 
 button.textContent="Click to resize Grid";
 
