@@ -38,7 +38,7 @@ function setIdSquares(arr){
 }
 
 function toPercentDimensions(num1){
-   let ans=((.9/num1)*100);
+   let ans=((1/num1)*100);
    return ans+'%';
 }
 
